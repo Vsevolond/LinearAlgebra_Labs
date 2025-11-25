@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D38237102ECF669300C1484A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D382370D2ECE139800C1484A /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		D32CA5502E79F374008BE07C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -34,6 +38,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		D38237032ECE0F0600C1484A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D3E1734C2EC4DE900051B4A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D3E1736B2EC6438D0051B4A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		D3F0EE1B2E9812B900A1B92E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +80,10 @@
 		D32CA5522E79F374008BE07C /* lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3569EB62E94020500F5BE02 /* lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab2; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37FA4612E9FBECD008D986A /* lab4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab4; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38237052ECE0F0600C1484A /* lab6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab6; sourceTree = BUILT_PRODUCTS_DIR; };
+		D382370D2ECE139800C1484A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D3E1734E2EC4DE900051B4A5 /* lab5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab5; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E1736D2EC6438D0051B4A5 /* let3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = let3; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F0EE1D2E9812B900A1B92E /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +101,21 @@
 		D37FA4622E9FBECD008D986A /* lab4 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = lab4;
+			sourceTree = "<group>";
+		};
+		D38237062ECE0F0600C1484A /* lab6 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lab6;
+			sourceTree = "<group>";
+		};
+		D3E1734F2EC4DE900051B4A5 /* lab5 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lab5;
+			sourceTree = "<group>";
+		};
+		D3E1736E2EC6438D0051B4A5 /* let3 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = let3;
 			sourceTree = "<group>";
 		};
 		D3F0EE1E2E9812B900A1B92E /* lab3 */ = {
@@ -97,6 +147,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D38237022ECE0F0600C1484A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D38237102ECF669300C1484A /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E1734B2EC4DE900051B4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E1736A2EC6438D0051B4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F0EE1A2E9812B900A1B92E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +186,10 @@
 				D3569EB72E94020500F5BE02 /* lab2 */,
 				D3F0EE1E2E9812B900A1B92E /* lab3 */,
 				D37FA4622E9FBECD008D986A /* lab4 */,
+				D3E1734F2EC4DE900051B4A5 /* lab5 */,
+				D3E1736E2EC6438D0051B4A5 /* let3 */,
+				D38237062ECE0F0600C1484A /* lab6 */,
+				D382370C2ECE139800C1484A /* Frameworks */,
 				D369A3EA2E70A9EB004ADAF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,8 +201,19 @@
 				D3569EB62E94020500F5BE02 /* lab2 */,
 				D3F0EE1D2E9812B900A1B92E /* lab3 */,
 				D37FA4612E9FBECD008D986A /* lab4 */,
+				D3E1734E2EC4DE900051B4A5 /* lab5 */,
+				D3E1736D2EC6438D0051B4A5 /* let3 */,
+				D38237052ECE0F0600C1484A /* lab6 */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D382370C2ECE139800C1484A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D382370D2ECE139800C1484A /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +285,72 @@
 			productReference = D37FA4612E9FBECD008D986A /* lab4 */;
 			productType = "com.apple.product-type.tool";
 		};
+		D38237042ECE0F0600C1484A /* lab6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D38237092ECE0F0600C1484A /* Build configuration list for PBXNativeTarget "lab6" */;
+			buildPhases = (
+				D38237012ECE0F0600C1484A /* Sources */,
+				D38237022ECE0F0600C1484A /* Frameworks */,
+				D38237032ECE0F0600C1484A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D38237062ECE0F0600C1484A /* lab6 */,
+			);
+			name = lab6;
+			packageProductDependencies = (
+			);
+			productName = lab6;
+			productReference = D38237052ECE0F0600C1484A /* lab6 */;
+			productType = "com.apple.product-type.tool";
+		};
+		D3E1734D2EC4DE900051B4A5 /* lab5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3E173522EC4DE900051B4A5 /* Build configuration list for PBXNativeTarget "lab5" */;
+			buildPhases = (
+				D3E1734A2EC4DE900051B4A5 /* Sources */,
+				D3E1734B2EC4DE900051B4A5 /* Frameworks */,
+				D3E1734C2EC4DE900051B4A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D3E1734F2EC4DE900051B4A5 /* lab5 */,
+			);
+			name = lab5;
+			packageProductDependencies = (
+			);
+			productName = lab5;
+			productReference = D3E1734E2EC4DE900051B4A5 /* lab5 */;
+			productType = "com.apple.product-type.tool";
+		};
+		D3E1736C2EC6438D0051B4A5 /* let3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3E173732EC6438D0051B4A5 /* Build configuration list for PBXNativeTarget "let3" */;
+			buildPhases = (
+				D3E173692EC6438D0051B4A5 /* Sources */,
+				D3E1736A2EC6438D0051B4A5 /* Frameworks */,
+				D3E1736B2EC6438D0051B4A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D3E1736E2EC6438D0051B4A5 /* let3 */,
+			);
+			name = let3;
+			packageProductDependencies = (
+			);
+			productName = let3;
+			productReference = D3E1736D2EC6438D0051B4A5 /* let3 */;
+			productType = "com.apple.product-type.tool";
+		};
 		D3F0EE1C2E9812B900A1B92E /* lab3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F0EE232E9812B900A1B92E /* Build configuration list for PBXNativeTarget "lab3" */;
@@ -239,6 +392,15 @@
 					D37FA4602E9FBECD008D986A = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
+					D38237042ECE0F0600C1484A = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					D3E1734D2EC4DE900051B4A5 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					D3E1736C2EC6438D0051B4A5 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 					D3F0EE1C2E9812B900A1B92E = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -262,6 +424,9 @@
 				D3569EB52E94020500F5BE02 /* lab2 */,
 				D3F0EE1C2E9812B900A1B92E /* lab3 */,
 				D37FA4602E9FBECD008D986A /* lab4 */,
+				D3E1734D2EC4DE900051B4A5 /* lab5 */,
+				D3E1736C2EC6438D0051B4A5 /* let3 */,
+				D38237042ECE0F0600C1484A /* lab6 */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +447,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D37FA45D2E9FBECD008D986A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D38237012ECE0F0600C1484A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E1734A2EC4DE900051B4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E173692EC6438D0051B4A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,22 +578,17 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/vsevolond/university/nmla-labs/env/lib/python3.13/site-packages/numpy/_core/include/**",
-					"/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/Headers/**",
-					"/Users/vsevolond/university/nmla-labs/matplotlib-cpp/**",
-					"/Users/vsevolond/university/nmla-labs/eigen-cpp/**",
+					"/Users/vsevolond/dev/nmla-labs/sciplot/**",
+					"/Users/vsevolond/dev/nmla-labs/eigen/**",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/**",
-					"/Users/vsevolond/university/nmla-labs/env/lib/**",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lpython3.13";
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -461,21 +642,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/vsevolond/university/nmla-labs/env/lib/python3.13/site-packages/numpy/_core/include/**",
-					"/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/Headers/**",
-					"/Users/vsevolond/university/nmla-labs/matplotlib-cpp/**",
-					"/Users/vsevolond/university/nmla-labs/eigen-cpp/**",
+					"/Users/vsevolond/dev/nmla-labs/sciplot/**",
+					"/Users/vsevolond/dev/nmla-labs/eigen/**",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = (
-					"/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/**",
-					"/Users/vsevolond/university/nmla-labs/env/lib/**",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "-lpython3.13";
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
@@ -492,6 +668,76 @@
 			name = Debug;
 		};
 		D37FA4662E9FBECD008D986A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D382370A2ECE0F0600C1484A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "/Users/vsevolond/dev/nmla-labs/sciplot/**";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DACCELERATE_NEW_LAPACK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D382370B2ECE0F0600C1484A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "/Users/vsevolond/dev/nmla-labs/sciplot/**";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DACCELERATE_NEW_LAPACK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D3E173532EC4DE900051B4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3E173542EC4DE900051B4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D3E173712EC6438D0051B4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3E173722EC6438D0051B4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -556,6 +802,33 @@
 			buildConfigurations = (
 				D37FA4652E9FBECD008D986A /* Debug */,
 				D37FA4662E9FBECD008D986A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D38237092ECE0F0600C1484A /* Build configuration list for PBXNativeTarget "lab6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D382370A2ECE0F0600C1484A /* Debug */,
+				D382370B2ECE0F0600C1484A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3E173522EC4DE900051B4A5 /* Build configuration list for PBXNativeTarget "lab5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E173532EC4DE900051B4A5 /* Debug */,
+				D3E173542EC4DE900051B4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3E173732EC6438D0051B4A5 /* Build configuration list for PBXNativeTarget "let3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E173712EC6438D0051B4A5 /* Debug */,
+				D3E173722EC6438D0051B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

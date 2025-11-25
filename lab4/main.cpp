@@ -5,13 +5,15 @@
 #include <tuple>
 #include <random>
 #include <Eigen/Dense>
-#include "matplotlibcpp.h"
+#include <sciplot/sciplot.hpp>
 #include <chrono>
-
-namespace plt = matplotlibcpp;
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
+
+using sciplot::Plot2D;
+using sciplot::Figure;
+using sciplot::Canvas;
 
 using std::vector;
 using std::function;
@@ -115,13 +117,13 @@ tuple<VectorXd, int> yakobi_method(MatrixXd A, VectorXd f, int n, double eps) {
     }
     
     VectorXd x_last = betta;
-    VectorXd x_curr = sum(betta, multiply(alpha, x_last, n), n);//alpha * x_last + betta;
+    VectorXd x_curr = sum(betta, multiply(alpha, x_last, n), n); //alpha * x_last + betta;
     
     int iterations = 1;
     
     while ((x_curr - x_last).norm() >= eps) {
         x_last = x_curr;
-        x_curr = sum(betta, multiply(alpha, x_last, n), n);//alpha * x_last + betta;
+        x_curr = sum(betta, multiply(alpha, x_last, n), n); //alpha * x_last + betta;
         
         iterations += 1;
     }
@@ -221,34 +223,36 @@ void test(int n, double dominance, double step) {
         zeidel_absolute_errors.push_back(zeidel_error);
     }
     
-    plt::figure();
-    plt::plot(dominances, yakobi_iterations, {{"label", "Yakobi Iterations"}});
-    plt::plot(dominances, zeidel_iterations, {{"label", "Zeidel Iterations"}});
-    plt::xlabel("Diagonal Dominance");
-    plt::ylabel("Iterations");
-    plt::title("Iterations vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::figure();
-    plt::plot(dominances, yakobi_durations, {{"label", "Yakobi Duration"}});
-    plt::plot(dominances, zeidel_durations, {{"label", "Zeidel Duration"}});
-    plt::xlabel("Diagonal Dominance");
-    plt::ylabel("Duration (microseconds)");
-    plt::title("Duration vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::figure();
-    plt::plot(dominances, yakobi_absolute_errors, {{"label", "Yakobi Error"}});
-    plt::plot(dominances, zeidel_absolute_errors, {{"label", "Zeidel Errors"}});
-    plt::xlabel("Diagonal Dominance");
-    plt::ylabel("Absolute Error");
-    plt::title("Absolute Error vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::show();
+    Plot2D plot1, plot2, plot3;
+
+    plot1.xlabel("Diagonal Dominance");
+    plot1.ylabel("Iterations");
+    plot1.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+    plot1.grid().show();
+
+    plot1.drawCurve(dominances, yakobi_iterations).label("Yakobi Iterations");
+    plot1.drawCurve(dominances, zeidel_iterations).label("Zeidel Iterations");
+
+    plot2.xlabel("Diagonal Dominance");
+    plot2.ylabel("Duration (microseconds)");
+    plot2.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+    plot2.grid().show();
+
+    plot2.drawCurve(dominances, yakobi_durations).label("Yakobi Duration");
+    plot2.drawCurve(dominances, zeidel_durations).label("Zeidel Duration");
+
+    plot3.xlabel("Diagonal Dominance");
+    plot3.ylabel("Absolute Error");
+    plot3.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+    plot3.grid().show();
+
+    plot3.drawCurve(dominances, yakobi_absolute_errors).label("Yakobi Error");
+    plot3.drawCurve(dominances, zeidel_absolute_errors).label("Zeidel Errors");
+
+    Figure fig = {{plot1}, {plot2}, {plot3}};
+    Canvas canvas = {{fig}};
+    canvas.size(800, 1200);
+    canvas.show();
 }
 
 int main() {

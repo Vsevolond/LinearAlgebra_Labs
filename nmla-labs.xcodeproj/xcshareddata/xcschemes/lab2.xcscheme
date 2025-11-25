@@ -51,13 +51,6 @@
             ReferencedContainer = "container:nmla-labs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "PYTHONPATH"
-            value = "/Users/vsevolond/university/nmla-labs/env/lib/python3.13/site-packages"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

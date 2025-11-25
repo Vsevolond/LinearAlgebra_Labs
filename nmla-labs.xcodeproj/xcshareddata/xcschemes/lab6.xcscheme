@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-               BuildableName = "lab3"
-               BlueprintName = "lab3"
+               BlueprintIdentifier = "D38237042ECE0F0600C1484A"
+               BuildableName = "lab6"
+               BlueprintName = "lab6"
                ReferencedContainer = "container:nmla-labs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,12 +45,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-            BuildableName = "lab3"
-            BlueprintName = "lab3"
+            BlueprintIdentifier = "D38237042ECE0F0600C1484A"
+            BuildableName = "lab6"
+            BlueprintName = "lab6"
             ReferencedContainer = "container:nmla-labs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "PATH"
+            value = "/opt/homebrew/bin:${PATH}"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -62,9 +69,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-            BuildableName = "lab3"
-            BlueprintName = "lab3"
+            BlueprintIdentifier = "D38237042ECE0F0600C1484A"
+            BuildableName = "lab6"
+            BlueprintName = "lab6"
             ReferencedContainer = "container:nmla-labs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

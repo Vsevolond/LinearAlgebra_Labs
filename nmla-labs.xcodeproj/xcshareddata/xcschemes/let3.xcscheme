@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-               BuildableName = "lab3"
-               BlueprintName = "lab3"
+               BlueprintIdentifier = "D3E1736C2EC6438D0051B4A5"
+               BuildableName = "let3"
+               BlueprintName = "let3"
                ReferencedContainer = "container:nmla-labs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-            BuildableName = "lab3"
-            BlueprintName = "lab3"
+            BlueprintIdentifier = "D3E1736C2EC6438D0051B4A5"
+            BuildableName = "let3"
+            BlueprintName = "let3"
             ReferencedContainer = "container:nmla-labs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,9 +62,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3F0EE1C2E9812B900A1B92E"
-            BuildableName = "lab3"
-            BlueprintName = "lab3"
+            BlueprintIdentifier = "D3E1736C2EC6438D0051B4A5"
+            BuildableName = "let3"
+            BlueprintName = "let3"
             ReferencedContainer = "container:nmla-labs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

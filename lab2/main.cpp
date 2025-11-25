@@ -5,12 +5,14 @@
 #include <tuple>
 #include <random>
 #include <Eigen/Dense>
-#include "matplotlibcpp.h"
-
-namespace plt = matplotlibcpp;
+#include <sciplot/sciplot.hpp>
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
+
+using sciplot::Plot2D;
+using sciplot::Figure;
+using sciplot::Canvas;
 
 using std::vector;
 using std::function;
@@ -267,10 +269,10 @@ int main() {
         cout << "[ " << a << " , " << b << " ] -> " << roots[i] << endl;
     }
     
-    plt::figure();
-    
+    Plot2D plot;
+        
     vector<double> roots_y(n, 0.0);
-    plt::scatter(roots, roots_y, 50, {{"color", "red"}, {"label", "Roots"}});
+    plot.drawPoints(roots, roots_y).label("Roots").pointType(7).pointSize(3);
     
     vector<std::string> colors = {"blue", "green", "orange", "purple", "brown"};
     for (int i = 0; i < n; ++i) {
@@ -279,14 +281,23 @@ int main() {
         vector<double> y_interval = {0.1 + 0.1 * i, 0.1 + 0.1 * i};
         string color = colors[i % colors.size()];
         
-        plt::plot(x_interval, y_interval, {{"color", color}, {"linewidth", "4"}, {"label", "Interval " + std::to_string(i)}});
+        plot.drawCurve(x_interval, y_interval)
+            .label("Interval " + std::to_string(i))
+            .lineColor(color)
+            .lineWidth(4);
     }
     
-    plt::plot(values, results, {{"label", "Characteristic Equation"}});
+    plot.drawCurve(values, results).label("Characteristic Equation");
     
-    plt::xlabel("x");
-    plt::ylabel("y");
-    plt::legend();
-    plt::grid(true);
-    plt::show();
+    plot.xlabel("x");
+    plot.ylabel("y");
+    plot.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+    plot.grid().show();
+    
+    Figure fig = {{plot}};
+    Canvas canvas = {{fig}};
+    canvas.size(800, 600);
+    canvas.show();
+    
+    return 0;
 }

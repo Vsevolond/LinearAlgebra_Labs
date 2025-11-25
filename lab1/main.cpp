@@ -4,12 +4,14 @@
 #include <tuple>
 #include <random>
 #include <Eigen/Dense>
-#include "matplotlibcpp.h"
-
-namespace plt = matplotlibcpp;
+#include <sciplot/sciplot.hpp>
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
+
+using sciplot::Plot2D;
+using sciplot::Figure;
+using sciplot::Canvas;
 
 using std::vector;
 using std::tuple;
@@ -549,6 +551,17 @@ VectorXd random_vector(int n, double limit) {
     return vector;
 }
 
+void show_plots(vector<Plot2D> plots, int n) {
+    for (int i = 0; i < n; i++) {
+        Plot2D plot = plots[i];
+        
+        Figure figure = {{plot}};
+        Canvas canvas = {{figure}};
+        
+        canvas.show();
+    }
+}
+
 // MARK: - Test
 
 void test(int n) {
@@ -701,43 +714,42 @@ void test(int n, double dominance, double step) {
     
     // MARK: - Построение графиков
     
-    plt::figure();
-    plt::plot(alphas, classic_absolute_errors, {{"label", "Classic Gaussian"}});
-    plt::plot(alphas, row_absolute_errors, {{"label", "Row Pivoting"}});
-    plt::plot(alphas, col_absolute_errors, {{"label", "Column Pivoting"}});
-    plt::plot(alphas, combined_absolute_errors, {{"label", "Combined Pivoting"}});
-    plt::plot(alphas, ref_absolute_errors, {{"label", "Eigen Library"}});
-    plt::xlabel("Alpha (Diagonal Dominance)");
-    plt::ylabel("Absolute Error (Euclidean Norm)");
-    plt::title("Absolute Error vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::figure();
-    plt::plot(alphas, classic_calculation_errors, {{"label", "Classic Gaussian"}});
-    plt::plot(alphas, row_calculation_errors, {{"label", "Row Pivoting"}});
-    plt::plot(alphas, col_calculation_errors, {{"label", "Column Pivoting"}});
-    plt::plot(alphas, combined_calculation_errors, {{"label", "Combined Pivoting"}});
-    plt::xlabel("Alpha (Diagonal Dominance)");
-    plt::ylabel("Calculation Error");
-    plt::title("Calculation Error vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::figure();
-    plt::plot(alphas, classic_perturbation_errors, {{"label", "Classic Gaussian"}});
-    plt::plot(alphas, row_perturbation_errors, {{"label", "Row Pivoting"}});
-    plt::plot(alphas, col_perturbation_errors, {{"label", "Column Pivoting"}});
-    plt::plot(alphas, combined_perturbation_errors, {{"label", "Combined Pivoting"}});
-    plt::plot(alphas, ref_perturbation_errors, {{"label", "Eigen Library"}});
-    plt::plot(alphas, perturbation_error_limits, {{"label", "Perturbation Error Limit"}});
-    plt::xlabel("Alpha (Diagonal Dominance)");
-    plt::ylabel("Perturbation Error (Relative Error)");
-    plt::title("Perturbation Error vs Diagonal Dominance");
-    plt::legend();
-    plt::grid(true);
-    
-    plt::show();
+    Plot2D plot1, plot2, plot3;
+
+    plot1.xlabel("Alpha (Diagonal Dominance)");
+    plot1.ylabel("Absolute Error (Euclidean Norm)");
+    plot1.grid().show();
+
+    plot1.drawCurve(alphas, classic_absolute_errors).label("Classic Gaussian");
+    plot1.drawCurve(alphas, row_absolute_errors).label("Row Pivoting");
+    plot1.drawCurve(alphas, col_absolute_errors).label("Column Pivoting");
+    plot1.drawCurve(alphas, combined_absolute_errors).label("Combined Pivoting");
+    plot1.drawCurve(alphas, ref_absolute_errors).label("Eigen Library");
+    plot1.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+
+    plot2.xlabel("Alpha (Diagonal Dominance)");
+    plot2.ylabel("Calculation Error");
+    plot2.grid().show();
+
+    plot2.drawCurve(alphas, classic_calculation_errors).label("Classic Gaussian");
+    plot2.drawCurve(alphas, row_calculation_errors).label("Row Pivoting");
+    plot2.drawCurve(alphas, col_calculation_errors).label("Column Pivoting");
+    plot2.drawCurve(alphas, combined_calculation_errors).label("Combined Pivoting");
+    plot2.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+
+    plot3.xlabel("Alpha (Diagonal Dominance)");
+    plot3.ylabel("Perturbation Error (Relative Error)");
+    plot3.grid().show();
+
+    plot3.drawCurve(alphas, classic_perturbation_errors).label("Classic Gaussian");
+    plot3.drawCurve(alphas, row_perturbation_errors).label("Row Pivoting");
+    plot3.drawCurve(alphas, col_perturbation_errors).label("Column Pivoting");
+    plot3.drawCurve(alphas, combined_perturbation_errors).label("Combined Pivoting");
+    plot3.drawCurve(alphas, ref_perturbation_errors).label("Eigen Library");
+    plot3.drawCurve(alphas, perturbation_error_limits).label("Perturbation Error Limit");
+    plot3.legend().atOutsideBottom().displayHorizontal().displayExpandWidthBy(2);
+
+    show_plots({plot1, plot2, plot3}, 3);
 }
 
 // MARK: - Main

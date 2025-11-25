@@ -5,9 +5,6 @@
 #include <tuple>
 #include <random>
 #include <Eigen/Dense>
-#include "matplotlibcpp.h"
-
-namespace plt = matplotlibcpp;
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
@@ -205,7 +202,6 @@ function<double(double)> characteristic_equation_derivative_builder(VectorXd coe
         return res;
     };
 }
-
 
 vector<tuple<double, double>> gershgorin_circles(MatrixXd A, int n) {
     vector<tuple<double, double>> circles(n);
